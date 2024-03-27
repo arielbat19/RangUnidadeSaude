@@ -32,4 +32,3 @@ git clone https://github.com/arielbat19/RangUnidadeSaude.git
 4. Acesse o projeto em uma pagina web
 
 	http://localhost:8080/rang/CadastroUnidadeSaude.xhtml
-
