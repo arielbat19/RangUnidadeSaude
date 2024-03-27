@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet library="css" name="file.css" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+
+	<p:messages autoUpdate="true" id="msg" />
+	<h:form id="form">
+		<p:panel header="Cadastro de Unidade de Saúde">
+			<h:panelGrid columns="4">
+				<p:outputLabel value="CNES" for="cnes" />
+				<p:inputText id="cnes" value="#{bean.saude.cnes}" size="50"
+					required="true" />
+				<p:outputLabel value="Nome estabelecimento" for="estabelecimento" />
+				<p:inputText id="estabelecimento" value="#{bean.saude.nomeEstabelecimento}" size="50"
+					required="true" />
+				<p:outputLabel value="Faixa CEP inicio" for="cepInicio" />
+				<p:inputText id="cepInicio" value="#{bean.saude.faixaInicioCep}" size="50"
+					required="true" />
+				<p:outputLabel value="Faixa CEP fim" for="cepFim" />
+				<p:inputText id="cepFim" value="#{bean.saude.faixaFinalCep}" size="50"
+					required="true" />
+				<p:messages outoUpdate="true" />
+				<p:commandButton value="Adicionar" action="#{bean.adicionar}"
+					update="form table" />
+				<p:button value="Consultar" outcome="/ConsultarCep.xhtml"/>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+	
+	<p:spacer height="10" />
+
+	<p:panel header="Lista de Pessoas">
+		<p:dataTable value="#{bean.listUnidadeSaude}" var="u" border="1" id="table"
+			 rows="5">
+			<p:column headerText="Nome Estabelecimento">
+				<p:outputLabel value="#{u.nomeEstabelecimento}" />
+			</p:column>
+			<p:column headerText="CNES">
+				<p:outputLabel value="#{u.cnes}" />
+			</p:column>
+			<p:column headerText="Faixa CEP inicio">
+				<p:outputLabel value="#{u.faixaInicioCep}" />
+			</p:column>
+			<p:column headerText="Faixa CEP fim">
+				<p:outputLabel value="#{u.faixaFinalCep}" />
+			</p:column>
+		</p:dataTable>
+	</p:panel>	
+
+</h:body>
+</html>
