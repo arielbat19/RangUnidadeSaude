@@ -21,4 +21,4 @@ MYSQL
 1. Clone o repositório do projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/arielbat19/RangUnidadeSaude.git
