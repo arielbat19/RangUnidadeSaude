@@ -5,11 +5,11 @@ residencia e o sitema sugere qual a Unidade de Saúde atende a área do paciente
 
 ## Tecnologias
 
-JAVA
-JSF
-PRIMEFACES
-JPA/HIBERNATE
-MYSQL
+- JAVA
+- JSF
+- PRIMEFACES
+- JPA/HIBERNATE
+- MYSQL
 
 ## Pré-requisitos
 
@@ -21,4 +21,15 @@ MYSQL
 1. Clone o repositório do projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/arielbat19/RangUnidadeSaude.git
+
+2. Adicione o projeto ao Apache TomCat
+
+3. Crie no WorkBench o banco de dados unidade
+	
+	CREATE DATABASE unidade
+
+4. Acesse o projeto em uma pagina web
+
+	http://localhost:8080/rang/CadastroUnidadeSaude.xhtml
+
