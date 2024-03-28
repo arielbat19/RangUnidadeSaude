@@ -22,7 +22,6 @@ public class CadastroService implements Serializable {
 	 * Faz as validações e salva na base de dados
 	 * @return void
 	 */
-	@SuppressWarnings("unlikely-arg-type")
 	public void salvar(UnidadeSaude u) throws ExceptionHandler {
 
 		if (u.getNomeEstabelecimento().length() < 3) {
